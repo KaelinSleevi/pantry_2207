@@ -16,4 +16,8 @@ class CookBook
       @ingredients << ingredient.name
     end
   end
+
+  def total_calories
+
+  end
 end
