@@ -1,6 +1,7 @@
 require './lib/ingredient'
 require './lib/pantry'
 require './lib/recipe'
+require './lib/cook_book'
 require 'rspec'
 
 RSpec.describe CookBook do

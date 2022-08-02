@@ -16,7 +16,7 @@ RSpec.describe Recipe do
     end
 
     it 'recipe has a name' do
-      expect(@recipe.name).to eq("Mac and Cheese")
+      expect(@recipe1.name).to eq("Mac and Cheese")
     end
 
     it 'recipe has no ingredients require by default' do
@@ -27,7 +27,7 @@ RSpec.describe Recipe do
       @recipe1.add_ingredient(@ingredient1, 2)
       @recipe1.add_ingredient(@ingredient1, 4)
       @recipe1.add_ingredient(@ingredient2, 8)
-      expect(@recipe1.ingredients_required).to eq({[@ingredient1 => 6], [@ingredient2 => 8]})
+      expect(@recipe1.ingredients_required).to eq({@ingredient1 => 6, @ingredient2 => 8})
       expect(@recipe1.ingredients).to eq([@ingredient1, @ingredient2])
     end
   end

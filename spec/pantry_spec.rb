@@ -9,7 +9,6 @@ RSpec.describe Pantry do
     @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
   end
 
-  context 'Iteration 1' do
     it 'pantry exists' do
       expect(@pantry).to be_an_instance_of(Pantry)
     end
@@ -29,5 +28,4 @@ RSpec.describe Pantry do
       @pantry.restock(@ingredient2, 7)
       expect(@pantry.stock_check(@ingredient2)).to eq(7)
     end
-  end
 end
