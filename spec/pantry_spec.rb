@@ -2,9 +2,11 @@ require './lib/ingredient'
 require './lib/pantry'
 require 'rspec'
 
-Rspec.describe Pantry do
+RSpec.describe Pantry do
   before :each do
     @pantry = Pantry.new
+    @ingredient1 = Ingredient.new({name: "Cheese", unit: "oz", calories: 50})
+    @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
   end
 
   context 'Iteration 1' do
