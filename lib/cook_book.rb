@@ -9,15 +9,13 @@ class CookBook
 
   def add_recipe(recipe)
     @recipes << recipe
-  end
-
-  def add_ingredient(ingredient, amount)
     recipe.ingredients.each do |ingredient|
       @ingredients << ingredient.name
     end
+    @ingredients = @ingredients.uniq
   end
 
-  def total_calories
-
+  def highest_calorie_meal
+    @recipes.sort { |recipe1, recipe2| recipe1.total_calories <=> recipe2.total_calories }.first
   end
 end
